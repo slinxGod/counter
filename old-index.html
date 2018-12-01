@@ -97,7 +97,7 @@
                 000000
             </h2>
             <div class="save__tip text-center" style="color: #888888;">
-                （约等于 <b class="save__tip__count">000</b> Kg 袋装油墨）
+                （约等于 <b class="save__tip__count">000</b> Kg 袋装油墨,节约成本<span class="save_pecent"></span>）
             </div>
         </div>
         <div class="text-center">
@@ -112,6 +112,7 @@
 </div>
 <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/validator.js"></script>
 <script type="text/javascript" src="assets/js/wow.js"></script>
 <script>
     $(function () {
@@ -136,6 +137,7 @@
             $('.firstTimeResult').html(firstTimeResult.toFixed(2));
             $('.save__content').html(saveCount.toFixed(2));
             $('.save__tip__count').html(saveTipCount.toFixed(2));
+            $('.save_pecent').html((parseFloat(saveCount/outTimeResult)*100).toFixed(1) +'%' || '0.0%');
         })
         $('.back').on('click',function(){
             $('.result').toggleClass('active');
