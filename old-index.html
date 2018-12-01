@@ -131,7 +131,7 @@
             var outTimeResult = numInput * countInput * 0.388;
             var firstTimeResult = numInput * countInput * 0.0026;
             var saveCount = outTimeResult - firstTimeResult;
-            var saveTipCount = parseInt(saveCount/128);
+            var saveTipCount = parseInt(saveCount/26);
             $('.outTimeResult').html(outTimeResult.toFixed(2));
             $('.firstTimeResult').html(firstTimeResult.toFixed(2));
             $('.save__content').html(saveCount.toFixed(2));
