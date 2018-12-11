@@ -1,11 +1,7 @@
 //js
-$("input[type='text']").keyup(function(){
-    var c=$(this);
-    if(/[^\d.]/.test(c.val())){
-        var temp_amount=c.val().replace(/[^\d.]/g,'');
-        $(this).val(temp_amount);
-    }
-});
+$('input').blur(function () {
+    document.body.scrollTop = $('.sumPage').offset().scrollHeight;
+})
 $(function () {
     $('#reset').on('click', function () {
         $('#numInput').val('');
