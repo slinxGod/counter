@@ -3,15 +3,9 @@ MACAU([0,1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {//js
-	$(document).ready(function () { $('body').css({'height':$(window).height()})});
-	alert('进来');
-	$("input[type='text']").keyup(function(){
-	    var c=$(this);
-	    if(/[^\d.]/.test(c.val())){
-	        var temp_amount=c.val().replace(/[^\d.]/g,'');
-	        $(this).val(temp_amount);
-	    }
-	});
+	$('input').blur(function () {
+	    document.body.scrollTop = $('.sumPage').offset().scrollHeight;
+	})
 	$(function () {
 	    $('#reset').on('click', function () {
 	        $('#numInput').val('');
@@ -11094,4 +11088,4 @@ MACAU([0,1],[
 
 /***/ }
 ]);
-//# sourceMappingURL=index.js.map?v=c0c21685408c68399de1
+//# sourceMappingURL=index.js.map?v=efddb81d986c9ad4891b
