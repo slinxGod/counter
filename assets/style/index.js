@@ -3,6 +3,10 @@ MACAU([0,1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {//js
+	var HEIGHT = $('body').height();
+	$(window).resize(function() {
+	    $('.page').height(HEIGHT);
+	});
 	$("input[type='text']").keyup(function(){
 	    var c=$(this);
 	    if(/[^\d.]/.test(c.val())){
@@ -11092,4 +11096,4 @@ MACAU([0,1],[
 
 /***/ }
 ]);
-//# sourceMappingURL=index.js.map?v=792304a729222c9d1b32
+//# sourceMappingURL=index.js.map?v=4c9aeb9b2dde707910c6
